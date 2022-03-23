@@ -9,9 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 //routes
 app.get('/',function (req, res){
-    //this serves static file to page
-    //res.sendFile(__dirname+'/index.html')
-    res.send('Hello');
+    res.sendFile(__dirname+'/public/Index.ejs');
 });
 
 //always keep this failsafe as the last route
