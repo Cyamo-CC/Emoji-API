@@ -1,0 +1,21 @@
+<%- include("../partials/head")%>
+<%- include("../partials/header")%>
+    <div class="Container">
+        <div class="row">
+            
+            <h1 class=" m-4"><%=Heading  %> </h1>
+            <h6 class=" mx-4 text-danger"><%=text %> </h6>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <% for(var i = 0; i < items.length ; i++ ){ %>         
+                <div class="col-sm-4 mt-5">
+                    <h4><%=items[i].name.fi %></h4>
+                    <p class="text-danger"><%=items[i].location.address.neighbourhood %></p>
+                    <p class="text-secondary"><%=items[i].description.body %></p>
+                </div>    
+            <% }; %> 
+        </div>
+    </div>
+<%- include("../partials/footer")%>
